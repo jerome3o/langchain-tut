@@ -14,7 +14,7 @@ def main():
     )
 
     output = agent(
-        "What date was langchain released?"
+        "what date was outer wilds released? and can you give me the square root of that day of the month?",
     )
     print(output)
 
