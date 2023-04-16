@@ -6,3 +6,5 @@ __pycache__/
 .env
 *.png
 .vscode/
+data/
+db/
