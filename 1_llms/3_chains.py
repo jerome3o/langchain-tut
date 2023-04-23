@@ -2,6 +2,7 @@ from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 
+
 def main():
     llm = OpenAI(temperature=0.5)
     prompt = PromptTemplate(
@@ -16,5 +17,6 @@ def main():
 
 if __name__ == "__main__":
     import logging
+
     logging.basicConfig(level=logging.INFO)
     main()

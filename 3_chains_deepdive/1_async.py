@@ -39,16 +39,17 @@ async def main():
     # If running this outside of Jupyter, use asyncio.run(generate_concurrently())
     await generate_concurrently()
     elapsed = time.perf_counter() - s
-    print('\033[1m' + f"Concurrent executed in {elapsed:0.2f} seconds." + '\033[0m')
+    print("\033[1m" + f"Concurrent executed in {elapsed:0.2f} seconds." + "\033[0m")
 
     s = time.perf_counter()
     generate_serially()
     elapsed = time.perf_counter() - s
-    print('\033[1m' + f"Serial executed in {elapsed:0.2f} seconds." + '\033[0m')
+    print("\033[1m" + f"Serial executed in {elapsed:0.2f} seconds." + "\033[0m")
 
 
 if __name__ == "__main__":
     import logging
+
     logging.basicConfig(level=logging.INFO)
 
     # run main with asyncio

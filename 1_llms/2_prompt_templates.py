@@ -1,6 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 
+
 def main():
     prompt = PromptTemplate(
         input_variables=["product"],
@@ -12,9 +13,8 @@ def main():
     print(llm(prompt.format(product="snack bars")))
 
 
-
-
 if __name__ == "__main__":
     import logging
+
     logging.basicConfig(level=logging.INFO)
     main()
