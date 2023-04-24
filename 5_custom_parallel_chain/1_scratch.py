@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from langchain.chains.base import Chain
 
@@ -21,3 +22,15 @@ class SplitLLMChain(Chain):
     def _call(self, inputs: Dict[str, str]) -> Dict[str, str]:
         """Run the logic of this chain and return the output."""
         pass
+
+
+def main():
+    llm = OpenAI(temperature=0.7)
+    # LLMChain()
+
+
+if __name__ == "__main__":
+    import logging
+
+    logging.basicConfig(level=logging.INFO)
+    main()
